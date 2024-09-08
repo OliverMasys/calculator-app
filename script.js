@@ -1,25 +1,25 @@
 
 // Named function for addition
 function add(a, b) {
-    return a + b;// TODO: Implement addition
+    return a + b; //Implement addition
 }
 
 // Anonymous function for subtraction
 const subtract = function(a, b) {
-    return a - b;// TODO: Implement subtraction
+    return a - b;  //Implement subtraction
 };
 
 // Arrow function for multiplication
 const multiply = (a, b) => {
-    return a * b;// TODO: Implement multiplication
+    return a * b; //Implement multiplication
 };
 
 // Named function for division
 function divide(a, b) {
-    /*if (b === 0) {
-        return 'Error: Division by zero';
-    */};
-    return a / b; // TODO: Implement division with check for division by zero
+    if (b === 0) {
+        return 'Error: Division by zero';  // To check for division by zero
+    };
+    return a / b; //Implement division
 }
 
 // Calculator object with methods
