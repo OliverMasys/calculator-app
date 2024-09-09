@@ -1,4 +1,3 @@
-
 // Named function for addition
 function add(a, b) {
     return a + b; //Implement addition
@@ -27,7 +26,7 @@ const calculator = {
     equation: '',
 
     // Assign add, subtract, multiply and divide functions to the properties
-    add: '',
+    add: add,
     subtract: subtract,
     multiply: multiply,
     divide: divide,
@@ -60,7 +59,7 @@ const calculator = {
                 result = this.multiply(a,b); //multiply method using `this`
                 break;
             case '/':
-                result = this.divide(a,b); //divide method using `this`
+                result = this.divide(a, b); //divide method using `this`
                 break;
             default:
                 result = 'Invalid Operation';
@@ -81,7 +80,7 @@ document.querySelectorAll('button[name="input"]').forEach(button => {
 
 document.querySelectorAll('button[name="operation"]').forEach(button => {
     button.addEventListener('click', (event) => {
-        const value = event.target.value;
+        const value = ` ${event.target.value} `;
         calculator.updateEquation(value);
         //call for updateEqucation that pass as argument
     });
