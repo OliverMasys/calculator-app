@@ -25,14 +25,21 @@ function divide(a, b) {
 // Calculator object with methods
 const calculator = {
     equation: '',
-    // TODO: assign the add, subtract, multiply and divide functions to obect properties
+
+    // Assign add, subtract, multiply and divide functions to the properties
+    add: '',
+    subtract: subtract,
+    multiply: multiply,
+    divide: divide,
 
     updateEquation: function(value) {
-        // TODO: Implement update equation logic
+        //update equation logic 
+        this.equation += value;
         document.getElementById('equation').value = this.equation;
     },
     clearEquation: function() {
-        // TODO: Implement clear equation logic
+        //Clear equation logic 
+        this.equation = '';
         document.getElementById('equation').value = this.equation;
     },
     calculate: function() {
@@ -44,16 +51,16 @@ const calculator = {
 
         switch (operation) {
             case '+':
-                result = // TODO: Implement call to add method using `this`
+                result = this.add(a,b); //add method using `this`
                 break;
             case '-':
-                result = // TODO: Implement call to subtract method using `this`
+                result = this.subtract(a,b); //subtract method using `this`
                 break;
             case '*':
-                result = // TODO: Implement call to multiply method using `this`
+                result = this.multiply(a,b); //multiply method using `this`
                 break;
             case '/':
-                result = // TODO: Implement call to divide method using `this`
+                result = this.divide(a,b); //divide method using `this`
                 break;
             default:
                 result = 'Invalid Operation';
