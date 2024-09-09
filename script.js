@@ -74,15 +74,16 @@ const calculator = {
 document.querySelectorAll('button[name="input"]').forEach(button => {
     button.addEventListener('click', (event) => {
         const value = event.target.value;
-        // TODO: Add call to updateEquation and pass value as an argument
+        calculator.updateEquation;
+        //Add the call to updateEquation 
     });
 });
 
 document.querySelectorAll('button[name="operation"]').forEach(button => {
     button.addEventListener('click', (event) => {
         const value = event.target.value;
-        // TODO: Add call to updateEquation and pass value as an argument
-        // NOTE: This passes the selected operation as part of a text string
+        calculator.updateEquation;
+        //Add the call to updateEqucation that pass as argument
     });
 });
 
