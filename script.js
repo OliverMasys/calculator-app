@@ -17,7 +17,7 @@ const multiply = (a, b) => {
 // Named function for division
 function divide(a, b) {
     if (b === 0) {
-        return 'Error: Division by zero';  // To check for division by zero
+        return 'Cannot divide by zero try again';  // To check for division by zero
     };
     return a / b; //Implement division
 }
@@ -74,7 +74,7 @@ const calculator = {
 document.querySelectorAll('button[name="input"]').forEach(button => {
     button.addEventListener('click', (event) => {
         const value = event.target.value;
-        calculator.updateEquation;
+        calculator.updateEquation(value);
         //Add the call to updateEquation 
     });
 });
@@ -82,15 +82,17 @@ document.querySelectorAll('button[name="input"]').forEach(button => {
 document.querySelectorAll('button[name="operation"]').forEach(button => {
     button.addEventListener('click', (event) => {
         const value = event.target.value;
-        calculator.updateEquation;
-        //Add the call to updateEqucation that pass as argument
+        calculator.updateEquation(value);
+        //call for updateEqucation that pass as argument
     });
 });
 
 document.querySelector('button[name="calculate"]').addEventListener('click', () => {
-    // TODO: Add call to calculate() result and update display
+    calculator.calculate();
+    //call to calculate() result and update display
 });
 
 document.querySelector('button[name="clear"]').addEventListener('click', () => {
-    // TODO: Clear the display
+    calculator.clearEquation();
+    //Clear display 
 });
